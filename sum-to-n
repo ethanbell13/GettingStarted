@@ -1,0 +1,12 @@
+#Write a program that asks the user for a number n and prints the sum of the numbers 1 to n
+def sum_to_n(n):
+    if isinstance(n,int) == True:
+        if n >= 0:
+            n_sum = 0
+            for i in range(n + 1):
+                n_sum += i
+            return n_sum
+        else:
+            return 'Please enter a positive integer.'
+    else:
+        return 'Please enter a positive integer.'
