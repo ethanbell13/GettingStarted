@@ -1,0 +1,17 @@
+#Write a program that prints a multiplication table for numbers up to 12.
+import plotly.figure_factory as ff
+
+def multiplication_table():
+    mt = {}
+    for i in range(13):
+        mt[i] = []
+        for j in range(13):
+            mt[i].append(i * j)
+    mt = [['X', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]]
+    for i in range(13):
+        mt_row = [i]
+        for j in range(13):
+            mt_row.append(i*j)
+        mt.append(mt_row)
+    fig = ff.create_table(mt)
+    return fig.show()
