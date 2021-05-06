@@ -1,4 +1,13 @@
-#Write a program that asks the user for their name and greets them with their name.
-def salutations():
-    name = input('What is your name? Como te llamas?')
-    return 'Nice to meet you {}'.format(name)
+/*Write a program that asks the user for their name and greets 
+them with their name.*/
+using System;
+namespace a
+{
+    class hello_world
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World");
+        }
+    }
+}
