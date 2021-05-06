@@ -1,0 +1,21 @@
+#Write a program that prints the next 20 leap years.
+def leap_years():
+    first_year = int(input("Enter a year in the form XXXX. eg 2021:"))
+    iteration_year = first_year
+    leap_years = []
+    statement = False
+    while statement is False:
+        if (iteration_year % 4) == 0:
+            if (iteration_year % 100) == 0 and (iteration_year % 400) != 0:
+                iteration_year += 1 
+            else:
+                statement = True
+                if iteration_year != first_year:
+                    leap_years.append(iteration_year)
+        else:
+            iteration_year += 1
+    while len(leap_years) != 20:
+        iteration_year += 4
+        if (iteration_year % 100) != 0 or (iteration_year % 400) == 0:
+            leap_years.append(iteration_year)
+    print(*leap_years)
