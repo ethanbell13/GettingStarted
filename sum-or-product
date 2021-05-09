@@ -1,0 +1,22 @@
+#Write a program that asks the user for a number n and gives them the possibility to choose between computing the
+#sum and computing the product of 1,…,n.
+def sum_or_product(n):
+    if isinstance(n,int) == True:
+        if n >= 0:
+            choice = input('sum or product?')
+            if choice == 'sum' or choice == 'Sum':
+                n_sum = 0
+                for i in range(n + 1):
+                    n_sum += i
+                return n_sum
+            elif choice == 'product' or choice == 'Product':
+                n_product = 1
+                for i in range(n):
+                    n_product *= (i + 1)
+                return n_product
+            else:
+                return 'Your input was not understood.'
+        else:
+            return 'Please enter a positive integer.'
+    else:
+        return 'Please enter a positive integer.'
