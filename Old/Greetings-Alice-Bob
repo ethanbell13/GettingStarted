@@ -1,0 +1,7 @@
+#Modify the previous program such that only the users Alice and Bob are greeted with their names.
+def salutations():
+    name = input('What is your name? Como te llamas?')
+    if name == 'Alice' or name == 'Bob':
+        return 'Nice to meet you {}'.format(name)
+    else:
+        return "This program just isn't for you {}".format(name)

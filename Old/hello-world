@@ -1,0 +1,12 @@
+//Write a program that prints ‘Hello World’ to the screen.
+using System;
+namespace a
+{
+    class hello_world
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World");
+        }
+    }
+}
