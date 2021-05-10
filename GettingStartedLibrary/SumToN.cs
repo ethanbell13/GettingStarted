@@ -2,6 +2,7 @@
 namespace Getting_Started_Library
 {
     public class SumToN
+    // Takes in a positive integer and outputs the sum of every number from 1 to the given integer.
     {
         public static int SumToNSolution(int n)
         {

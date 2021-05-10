@@ -12,5 +12,12 @@ namespace Getting_Started_Library.Tests
             int result = SumToN.SumToNSolution(input);
             Assert.AreEqual(15, result);
         }
+        [TestMethod]
+        public void NegIntTest()
+        {
+            int input = -1;
+            int result = SumToN.SumToNSolution(input);
+            Assert.AreEqual(1, result);
+        }
     }
 }
