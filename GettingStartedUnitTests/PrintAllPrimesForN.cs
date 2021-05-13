@@ -2,7 +2,7 @@
 
 namespace GettingStartedLibrary
 {
-    public class PrintAllPrimesForN 
+    public class PrintAllPrimesForN
     {
         public static string PrintAllPrimesForNSolution(int n)
         // Prints all the given integer and all primes up to the given positive integer.

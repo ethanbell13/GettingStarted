@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ethan\\Documents\\Official Stuff\\Coding Portfolio\\gettng-started\\GettingStartedLibrary\\GettingStartedLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\ethan\\Documents\\Official Stuff\\Coding Portfolio\\GettingStartedSolution\\GettingStartedLibrary\\GettingStartedLibrary.csproj",
       "projectName": "GettingStartedLibrary",
-      "projectPath": "C:\\Users\\ethan\\Documents\\Official Stuff\\Coding Portfolio\\gettng-started\\GettingStartedLibrary\\GettingStartedLibrary.csproj",
+      "projectPath": "C:\\Users\\ethan\\Documents\\Official Stuff\\Coding Portfolio\\GettingStartedSolution\\GettingStartedLibrary\\GettingStartedLibrary.csproj",
       "packagesPath": "C:\\Users\\ethan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ethan\\Documents\\Official Stuff\\Coding Portfolio\\gettng-started\\GettingStartedLibrary\\obj\\",
+      "outputPath": "C:\\Users\\ethan\\Documents\\Official Stuff\\Coding Portfolio\\GettingStartedSolution\\GettingStartedLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

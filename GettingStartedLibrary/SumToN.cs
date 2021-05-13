@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Getting_Started_Library
+namespace GettingStartedLibrary
 {
     public class SumToN
     // Takes in a positive integer and outputs the sum of every number from 1 to the given integer.

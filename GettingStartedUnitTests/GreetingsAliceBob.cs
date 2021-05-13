@@ -6,13 +6,13 @@ namespace GettingStartedLibrary
         public static string GreetingsAliceBobSolution(string name)
         // Takes user name and greets them if they are Alice or Bob
         {
-            if (name == "Alice")
+            if (String.Equals(name, "Alice"))
             {
-                return "Nice to meet you Alice";
+                return "Nice to meet you Alice.";
             }
-            else if (name == "Bob")
+            else if (String.Equals(name, "Bob"))
             {
-                return ("Nice to meet you Bob");
+                return "Nice to meet you Bob.";
             }
             else
             {
