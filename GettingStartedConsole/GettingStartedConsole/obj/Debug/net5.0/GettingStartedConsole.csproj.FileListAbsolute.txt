@@ -1,0 +1,16 @@
+C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\gettng-started\GettingStartedConsole\GettingStartedConsole\bin\Debug\net5.0\GettingStartedConsole.exe
+C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\gettng-started\GettingStartedConsole\GettingStartedConsole\bin\Debug\net5.0\GettingStartedConsole.deps.json
+C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\gettng-started\GettingStartedConsole\GettingStartedConsole\bin\Debug\net5.0\GettingStartedConsole.runtimeconfig.json
+C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\gettng-started\GettingStartedConsole\GettingStartedConsole\bin\Debug\net5.0\GettingStartedConsole.runtimeconfig.dev.json
+C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\gettng-started\GettingStartedConsole\GettingStartedConsole\bin\Debug\net5.0\GettingStartedConsole.dll
+C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\gettng-started\GettingStartedConsole\GettingStartedConsole\bin\Debug\net5.0\ref\GettingStartedConsole.dll
+C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\gettng-started\GettingStartedConsole\GettingStartedConsole\bin\Debug\net5.0\GettingStartedConsole.pdb
+C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\gettng-started\GettingStartedConsole\GettingStartedConsole\obj\Debug\net5.0\GettingStartedConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\gettng-started\GettingStartedConsole\GettingStartedConsole\obj\Debug\net5.0\GettingStartedConsole.AssemblyInfoInputs.cache
+C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\gettng-started\GettingStartedConsole\GettingStartedConsole\obj\Debug\net5.0\GettingStartedConsole.AssemblyInfo.cs
+C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\gettng-started\GettingStartedConsole\GettingStartedConsole\obj\Debug\net5.0\GettingStartedConsole.csproj.CoreCompileInputs.cache
+C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\gettng-started\GettingStartedConsole\GettingStartedConsole\obj\Debug\net5.0\GettingStartedConsole.dll
+C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\gettng-started\GettingStartedConsole\GettingStartedConsole\obj\Debug\net5.0\ref\GettingStartedConsole.dll
+C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\gettng-started\GettingStartedConsole\GettingStartedConsole\obj\Debug\net5.0\GettingStartedConsole.pdb
+C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\gettng-started\GettingStartedConsole\GettingStartedConsole\obj\Debug\net5.0\GettingStartedConsole.genruntimeconfig.cache
+C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\gettng-started\GettingStartedConsole\GettingStartedConsole\obj\Debug\net5.0\GettingStartedConsole.csprojAssemblyReference.cache
