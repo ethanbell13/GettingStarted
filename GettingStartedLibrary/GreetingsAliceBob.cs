@@ -8,11 +8,11 @@ namespace GettingStartedLibrary
         {
             if (name == "Alice")
             {
-                return "Nice to meet you Alice";
+                return "Nice to meet you Alice.";
             }
             else if (name == "Bob")
             {
-                return ("Nice to meet you Bob");
+                return ("Nice to meet you Bob.");
             }
             else
             {

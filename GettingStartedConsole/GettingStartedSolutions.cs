@@ -149,7 +149,7 @@ namespace GettingStartedConsole
             Console.WriteLine("Enter an integer between " + min + "(inclusive) and " + max + "(inclusive):");
             string guess = Console.ReadLine();
             int numtest;
-            while (Int32.TryParse(guess, out numtest) == false)
+            if(Int32.TryParse(guess, out numtest) == false)
             {
                 Console.WriteLine("Your input was not an integer between " + min + "(inclusive) and "
                     + max + "(inclusive).\nAny subsequent invalid input will end the game.");
