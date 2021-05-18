@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Collections.Generic;
+using System.IO;
 
 
 namespace GettingStartedConsole
@@ -9,18 +10,11 @@ namespace GettingStartedConsole
     {
 #pragma warning disable IDE0060 // Remove unused parameter
         public static void Main(string[] args)
-#pragma warning restore IDE0060 // Remove unused parameter
         {
-            List<int> guesses = new List<int>();
-            guesses.Add(1);
-            guesses.Add(7);
-            Console.WriteLine(guesses.Contains(5) + "\n");
-
-            string input = Console.ReadLine();
-            int num;
-            Int32.TryParse(input, out num);
-            Console.WriteLine(input + num);
+            LeapYears(2250);
         }
+#pragma warning restore IDE0060 // Remove unused parameter
+        
         //Print "Hello World when called.
         public static void HelloWorld()
         {
@@ -144,24 +138,104 @@ namespace GettingStartedConsole
         and including the min and max numbers.*/
         public static string GuessingGame(int min, int max)
         {
-            Random random = new Random();
-            int num = random.Next(min, (max + 1));
-            Console.WriteLine("Enter an integer between " + min + "(inclusive) and " + max + "(inclusive):");
-            string guess = Console.ReadLine();
-            int numtest;
-            if(Int32.TryParse(guess, out numtest) == false)
+            if (min > max)
             {
-                Console.WriteLine("Your input was not an integer between " + min + "(inclusive) and "
-                    + max + "(inclusive).\nAny subsequent invalid input will end the game.");
-                Console.WriteLine("Enter an integer between " + min + "(inclusive) and " + max + "(inclusive):");
-                guess = Console.ReadLine();
+                Console.WriteLine("The integer for min must be smaller than or equal to the integer for max.");
+                return "The integer for min must be smaller than or equal to the integer for max.";
             }
-            int guessnum = Int32.Parse(guess);
-            List<int> guesses = new List<int>();
-            int attempts = 1;
-            return "i" + attempts;
+            else
+            {
+                Random random = new Random();
+                int num = random.Next(min, (max + 1));
+                Console.WriteLine("Enter an integer between " + min + "(inclusive) and " + max + "(inclusive):");
+                bool condition = true;
+                string guess;
+                int guessnum;
+                List<int> guesses = new List<int>();
+                while (condition == true)
+                {
+                    guess = Console.ReadLine();
+                    if ((Int32.TryParse(guess, out guessnum) == false) || (guessnum < min) || (guessnum > max))
+                    {
+                        Console.WriteLine("Try again with a valid integer.");
+                    }
+                    else if (guessnum < num)
+                    {
+                        if (guesses.Contains(guessnum) == false)
+                        {
+                            guesses.Add(guessnum);
+                            Console.WriteLine("Too low.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("You already tried " + guessnum + ".");
+                        }
+
+                    }
+                    else if (guessnum > num)
+                    {
+                        if (guesses.Contains(guessnum) == false)
+                        {
+                            guesses.Add(guessnum);
+                            Console.WriteLine("Too high.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("You already tried " + guessnum + ".");
+                        }
+                    }
+                    else
+                    {
+                        condition = false;
+                    }
+                }
+                int tries = guesses.Count + 1;
+                Console.WriteLine("Congratulations! You won the game in " + tries + " tries.");
+                return "Congratulations! You won the game in " + tries + " tries.";
+            }
+        }
+        public static void LeapYears(int year)
+        {
+            int iterationYear = year;
+            List<int> leapYears = new List<int>();
+            bool condition = true;
+            while (condition == true)
+            {
+                if ((iterationYear % 4) == 0 && ((iterationYear % 100) != 0 || (iterationYear % 400) == 0))
+                {
+                    if (iterationYear != year)
+                    {
+                        leapYears.Add(iterationYear);
+                        condition = false;
+                    }
+                    else
+                    {
+                        condition = false;
+                    }
+                }
+                else
+                {
+                    iterationYear++;
+                }
+            }
+            while (leapYears.Count != 20)
+            {
+                iterationYear += 4;
+                if ((iterationYear % 100) != 0 || (iterationYear % 400) == 0)
+                {
+                    leapYears.Add(iterationYear);
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            Console.WriteLine("The next 20 leap years are:");
+            foreach (int i in leapYears)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
-            
- 
+
