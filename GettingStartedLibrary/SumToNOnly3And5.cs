@@ -1,9 +1,9 @@
 ﻿using System;
 namespace GettingStartedLibrary
 {
-    public class SumtonOnly3And5 
+    public class SumtoNOnly3And5 
     {
-        public static int SumToNOnly3And5Solution(int n)
+        public int SumToNOnly3And5Solution(int n)
         {
             if (n <= 0)
             {

@@ -13,9 +13,9 @@ namespace GettingStartedLibrary.Tests
             using (var sw = new StringWriter())
             {
                 Console.SetOut(sw);
-                HelloWorld.HelloWorldSolution();
+                new HelloWorld().HelloWorldSolution();
                 Assert.AreEqual("Hello World!", sw.ToString().Trim());
             }
         }
-    }
+    }       
 }

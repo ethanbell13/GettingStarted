@@ -4,7 +4,7 @@ namespace GettingStartedLibrary
 {
     public class PrintAllPrimesForN 
     {
-        public static string PrintAllPrimesForNSolution(int n)
+        public string PrintAllPrimesForNSolution(int n)
         {
             int x = 2;
             string primes = "Prime numbers up to and including " + n + ":\n" + 1;

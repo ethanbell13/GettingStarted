@@ -11,7 +11,7 @@ namespace GettingStartedLibrary
         {
             Console.WriteLine("Enter p to receive the product or s to receive the sum:");
             string choice = Console.ReadLine().ToLower();
-            while(choice != "p" || choice != "s")
+            while(choice != "p" && choice != "s")
             {
                 Console.WriteLine("Enter p to receive the product or s to receive the sum:");
                 choice = Console.ReadLine().ToLower();
@@ -29,7 +29,8 @@ namespace GettingStartedLibrary
         public int SumOrProductSolution(int n)
         {
             int x = 0;
-            if (_userChoice.GetUserChoice() == "s" && n > 0)
+            var choice = _userChoice.GetUserChoice();
+            if (choice == "s" && n > 0)
             {
                 for (int i = 1; i <= n; i++)
                 {
@@ -37,7 +38,7 @@ namespace GettingStartedLibrary
                 }
                 return x;
             }
-            else if (_userChoice.GetUserChoice() == "s" && n <= 0)
+            else if (choice == "s" && n <= 0)
             {
                 for (int i = 1; i >= n; i--)
                 {
@@ -45,7 +46,7 @@ namespace GettingStartedLibrary
                 }
                 return x;
             }
-            else if (_userChoice.GetUserChoice() == "p" && n > 0)
+            else if (choice == "p" && n > 0)
                 {
                     x = 1;
                     for (int i = 1; i <= n; i++)

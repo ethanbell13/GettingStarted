@@ -9,13 +9,13 @@ namespace GettingStartedLibrary.Tests
         [TestMethod]
         public void PositiveIntTest()
         {
-            int result = SumToN.SumToNSolution(5);
+            int result = new SumToN().SumToNSolution(5);
             Assert.AreEqual(15, result);
         }
         [TestMethod]
         public void NonPositiveIntTest()
         {
-            int result = SumToN.SumToNSolution(-5);
+            int result = new SumToN().SumToNSolution(-5);
             Assert.AreEqual(-14, result);
         }
     }

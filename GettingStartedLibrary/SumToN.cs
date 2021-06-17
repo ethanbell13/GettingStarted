@@ -3,7 +3,7 @@ namespace GettingStartedLibrary
 {
     public class SumToN
     {
-        public static int SumToNSolution(int n)
+        public int SumToNSolution(int n)
         {
             if (n <= 0)
             {

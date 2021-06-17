@@ -3,7 +3,7 @@ namespace GettingStartedLibrary
 {
     public class HelloWorld
     {
-        public static void HelloWorldSolution()
+        public void HelloWorldSolution()
         {
             Console.WriteLine("Hello World!");
         }
