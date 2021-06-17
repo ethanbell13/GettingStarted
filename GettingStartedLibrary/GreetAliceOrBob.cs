@@ -1,26 +1,14 @@
-﻿using System;
-
-namespace GettingStartedLibrary
+﻿namespace GettingStartedLibrary
 {
-    public class GreetAliceOrBob
-    {
-        private IUserInput _userInput;
-        public GreetAliceOrBob(IUserInput userInput = null)
+    public static class GreetAliceOrBob
+    {        
+        public static string GreetAliceOrBobSolution(string userInput)
         {
-            _userInput = userInput ?? new UserInput();
-        }
-        public void GreetAliceOrBobSolution()
-        {
-            string name = _userInput.GetName();
-            string nameLowCase = name.ToLower();
+            var nameLowCase = userInput.ToLower();
             if (nameLowCase == "alice" || nameLowCase == "bob")
-            {
-                Console.WriteLine("Nice to meet you {0}!", name);
-            }
+                return $"Nice to meet you {userInput}!";
             else
-            {
-                Console.WriteLine("Only Alice or Bob may use this program.");
-            }
+                return "Only Alice or Bob may use this program.";
         }
     }
 }

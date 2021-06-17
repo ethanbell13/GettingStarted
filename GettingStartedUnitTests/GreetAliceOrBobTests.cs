@@ -1,8 +1,7 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using Moq;
-using System.IO;
-namespace GettingStartedLibrary.Tests
+﻿using GettingStartedLibrary;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace GettingStartedUnitTests
 {
     [TestClass]
     public class GreetAliceOrBobTests
@@ -10,41 +9,22 @@ namespace GettingStartedLibrary.Tests
         [TestMethod]
         public void GreetUser_AliceGiven_GreetsAlice()
         {
-            var mockIUserInput = new Mock<IUserInput>();
-            var _mockUserInput = new GreetAliceOrBob(mockIUserInput.Object);
-            mockIUserInput.Setup(miui => miui.GetName()).Returns("Alice");
-            using (var sw = new StringWriter())
-            {
-                Console.SetOut(sw);
-                _mockUserInput.GreetAliceOrBobSolution();
-                Assert.AreEqual("Nice to meet you Alice!", sw.ToString().Trim());
-            }
+            var result = GreetAliceOrBob.GreetAliceOrBobSolution("Alice");
+            Assert.AreEqual("Nice to meet you Alice!", result);
         }
+
         [TestMethod]
         public void GreetUser_BobGiven_GreetsBob()
         {
-            var mockIUserInput = new Mock<IUserInput>();
-            var _mockUserInput = new GreetAliceOrBob(mockIUserInput.Object);
-            mockIUserInput.Setup(miui => miui.GetName()).Returns("Bob");
-            using (var sw = new StringWriter())
-            {
-                Console.SetOut(sw);
-                _mockUserInput.GreetAliceOrBobSolution();
-                Assert.AreEqual("Nice to meet you Bob!", sw.ToString().Trim());
-            }
+            var result = GreetAliceOrBob.GreetAliceOrBobSolution("Bob");
+            Assert.AreEqual("Nice to meet you Bob!", result);
         }
+
         [TestMethod]
         public void GreetUser_NeitherAliceOrBobGiven_DoesNotGreet()
         {
-            var mockIUserInput = new Mock<IUserInput>();
-            var _mockUserInput = new GreetAliceOrBob(mockIUserInput.Object);
-            mockIUserInput.Setup(miui => miui.GetName()).Returns("Jack");
-            using (var sw = new StringWriter())
-            {
-                Console.SetOut(sw);
-                _mockUserInput.GreetAliceOrBobSolution();
-                Assert.AreEqual("Only Alice or Bob may use this program.", sw.ToString().Trim());
-            }
+            var result = GreetAliceOrBob.GreetAliceOrBobSolution("Jack");
+            Assert.AreEqual("Only Alice or Bob may use this program.", result);
         }
     }
 }

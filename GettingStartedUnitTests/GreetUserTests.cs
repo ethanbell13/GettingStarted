@@ -1,9 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using Moq;
+﻿using System;
 using System.IO;
+using GettingStartedLibrary;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 
-namespace GettingStartedLibrary.Tests
+namespace GettingStartedUnitTests
 {
     [TestClass]
     public class GreetUserTests

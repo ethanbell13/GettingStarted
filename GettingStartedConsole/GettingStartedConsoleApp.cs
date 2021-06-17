@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Data;
-
-
-namespace GettingStartedLibrary
+﻿namespace GettingStartedConsole
 {
     public class GettingStartedConsoleApp
     {

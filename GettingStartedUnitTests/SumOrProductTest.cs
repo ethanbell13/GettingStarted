@@ -1,8 +1,8 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using GettingStartedLibrary;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
-namespace GettingStartedLibrary.Tests
+namespace GettingStartedUnitTests
 {
     [TestClass]
     public class SumOrProductTest

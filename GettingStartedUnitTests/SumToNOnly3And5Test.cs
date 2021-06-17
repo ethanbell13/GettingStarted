@@ -1,5 +1,7 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-namespace GettingStartedLibrary.Tests
+﻿using GettingStartedLibrary;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace GettingStartedUnitTests
 {
     [TestClass]
     public class SumToNOnly3And5Test

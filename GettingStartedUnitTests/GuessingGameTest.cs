@@ -1,8 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Moq;
+﻿using System;
 using System.IO;
-using System;
-namespace GettingStartedLibrary.Tests
+using GettingStartedLibrary;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
+
+namespace GettingStartedUnitTests
 {
     [TestClass]
     public class GuessingGameTest

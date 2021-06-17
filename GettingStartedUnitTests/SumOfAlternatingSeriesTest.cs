@@ -1,7 +1,7 @@
-﻿using System;
+﻿using GettingStartedLibrary;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace GettingStartedLibrary.Tests
+namespace GettingStartedUnitTests
 {
     [TestClass]
     public class SumOfAlternatingSeriesTest

@@ -1,7 +1,7 @@
+using GettingStartedLibrary;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.IO;
-namespace GettingStartedLibrary.Tests
+
+namespace GettingStartedUnitTests
 {
     [TestClass]
     public class SumToNTests

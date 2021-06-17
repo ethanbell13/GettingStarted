@@ -1,7 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
 using System.IO;
-using System;
-namespace GettingStartedLibrary.Tests
+using GettingStartedLibrary;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace GettingStartedUnitTests
 {
     [TestClass]
     public class LeapYearsTest

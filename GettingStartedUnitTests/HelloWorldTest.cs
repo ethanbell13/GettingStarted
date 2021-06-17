@@ -1,8 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
 using System.IO;
-using System;
+using GettingStartedLibrary;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace GettingStartedLibrary.Tests
+namespace GettingStartedUnitTests
 {
     [TestClass]
     public class HelloWorldTest
