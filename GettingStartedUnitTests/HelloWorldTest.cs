@@ -1,4 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.IO;
+using System;
 
 namespace GettingStartedLibrary.Tests
 {
@@ -6,10 +8,14 @@ namespace GettingStartedLibrary.Tests
     public class HelloWorldTest
     {
         [TestMethod]
-        public void BasicTest()
+        public void HelloWorld_MethodCalled_PrintsHelloWorld()
         {
-            string result = HelloWorld.HelloWorldSolution();
-            Assert.AreEqual("Hello World", result);
+            using (var sw = new StringWriter())
+            {
+                Console.SetOut(sw);
+                HelloWorld.HelloWorldSolution();
+                Assert.AreEqual("Hello World!", sw.ToString().Trim());
+            }
         }
     }
 }

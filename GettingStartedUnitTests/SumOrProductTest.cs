@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using Moq;
 
 namespace GettingStartedLibrary.Tests
 {
@@ -7,52 +8,40 @@ namespace GettingStartedLibrary.Tests
     public class SumOrProductTest
     {
         [TestMethod]
-        public void UpperProductTest()
+        public void PositiveIntProductTest()
         {
-            int n = 4;
-            string choice = "Product";
-            int result = SumOrProduct.SumOrProductSolution(n, choice);
-            Assert.AreEqual(result, 24);
-        }   
-        [TestMethod]
-        public void BadStrTest()
-        {
-            int n = 4;
-            string choice = "hi";
-            int result = SumOrProduct.SumOrProductSolution(n, choice);
-            Assert.AreEqual(result, -1);
+            var mockIUserChoice = new Mock<IUserChoice>();
+            var _mockUserChoice = new SumOrProduct(mockIUserChoice.Object);
+            mockIUserChoice.Setup(miuc => miuc.GetUserChoice()).Returns("p");
+            var result = _mockUserChoice.SumOrProductSolution(4);
+            Assert.AreEqual(24, result);
         }
         [TestMethod]
-        public void BadIntTest()
+        public void NegIntProductTest()
         {
-            int n = -4;
-            string choice = "Product";
-            int result = SumOrProduct.SumOrProductSolution(n, choice);
-            Assert.AreEqual(result, -1);
+            var mockIUserChoice = new Mock<IUserChoice>();
+            var _mockUserChoice = new SumOrProduct(mockIUserChoice.Object);
+            mockIUserChoice.Setup(miuc => miuc.GetUserChoice()).Returns("p");
+            var result = _mockUserChoice.SumOrProductSolution(-4);
+            Assert.AreEqual(0, result);
         }
         [TestMethod]
-        public void LowerProductTest()
+        public void NegIntSumtTest()
         {
-            int n = 4;
-            string choice = "product";
-            int result = SumOrProduct.SumOrProductSolution(n, choice);
-            Assert.AreEqual(result, 24);
+            var mockIUserChoice = new Mock<IUserChoice>();
+            var _mockUserChoice = new SumOrProduct(mockIUserChoice.Object);
+            mockIUserChoice.Setup(miuc => miuc.GetUserChoice()).Returns("s");
+            var result = _mockUserChoice.SumOrProductSolution(-4);
+            Assert.AreEqual(-9, result);
         }
         [TestMethod]
-        public void UpperSumTest()
+        public void PositiveIntSumTest()
         {
-            int n = 4;
-            string choice = "Sum";
-            int result = SumOrProduct.SumOrProductSolution(n, choice);
-            Assert.AreEqual(result, 10);
-        }
-        [TestMethod]
-        public void LowerSumTest()
-        {
-            int n = 4;
-            string choice = "sum";
-            int result = SumOrProduct.SumOrProductSolution(n, choice);
-            Assert.AreEqual(result, 10);
+            var mockIUserChoice = new Mock<IUserChoice>();
+            var _mockUserChoice = new SumOrProduct(mockIUserChoice.Object);
+            mockIUserChoice.Setup(miuc => miuc.GetUserChoice()).Returns("s");
+            var result = _mockUserChoice.SumOrProductSolution(4);
+            Assert.AreEqual(10, result);
         }
     }
 }

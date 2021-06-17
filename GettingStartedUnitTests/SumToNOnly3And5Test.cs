@@ -5,18 +5,16 @@ namespace GettingStartedLibrary.Tests
     public class SumToNOnly3And5Test
     {
         [TestMethod]
-        public void BasicTest()
+        public void PositiveIntTest()
         {
-            int input = 10;
-            int result = SumtonOnly3And5.SumToNOnly3And5Solution(input);
+            int result = SumtonOnly3And5.SumToNOnly3And5Solution(10);
             Assert.AreEqual(result, 33);
         }
         [TestMethod]
-        public void LowIntTest()
+        public void NegativeIntTest()
         {
-            int input = 2;
-            int result = SumtonOnly3And5.SumToNOnly3And5Solution(input);
-            Assert.AreEqual(result, 1);
+            int result = SumtonOnly3And5.SumToNOnly3And5Solution(-10);
+            Assert.AreEqual(result, -33);
         }
     }
 }

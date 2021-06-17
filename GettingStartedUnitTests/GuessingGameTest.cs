@@ -1,5 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+using Moq;
+using System.IO;
+using System;
 namespace GettingStartedLibrary.Tests
 {
     [TestClass]
@@ -9,10 +11,34 @@ namespace GettingStartedLibrary.Tests
         [TestMethod]
         public void BadParametersTest()
         {
-            int minparam = 3;
-            int maxparam = 1;
-            string result = GuessingGame.GuessingGameSolution(minparam, maxparam);
-            Assert.AreEqual(result, "The integer for min must be smaller than or equal to the integer for max.");
+            var mockIRandomInt = new Mock<IRandomInt>();
+            var mockIUserGuess = new Mock<IUserGuess>();
+            var _mockGuessingGameObject = new GuessingGame(mockIRandomInt.Object, mockIUserGuess.Object);
+            using (var sw = new StringWriter())
+            {
+                Console.SetOut(sw);
+                _mockGuessingGameObject.GuessingGameSolution(3, 1);
+                Assert.AreEqual("The integer for min must be smaller than or equal to the integer for max.", sw.ToString().Trim());
+            }
+        }
+        [TestMethod]
+        public void GuessingGameWithParametersOf1And5_RandomIntOf3And3GuessesOf1And4And3Given_ProvidesProperOutPutToUser()
+        {
+            var mockIRandomInt = new Mock<IRandomInt>();
+            mockIRandomInt.Setup(miri => miri.GetRandomInt(1, 5)).Returns(3);
+            var mockIUserGuess = new Mock<IUserGuess>();
+            mockIUserGuess.SetupSequence(miug => miug.GetUserGuess(1, 5))
+                .Returns(1)
+                .Returns(4)
+                .Returns(3);
+            var _mockGuessingGameObject = new GuessingGame(mockIRandomInt.Object, mockIUserGuess.Object);
+            using (var sw = new StringWriter())
+            {
+                Console.SetOut(sw);
+                _mockGuessingGameObject.GuessingGameSolution(1, 5);
+                Assert.AreEqual(("1 is too low.\r\n4 is too high.\r\nCongratulations! You won the game in 3 tries."), 
+                    sw.ToString().Trim());
+            }
         }
     }
 }

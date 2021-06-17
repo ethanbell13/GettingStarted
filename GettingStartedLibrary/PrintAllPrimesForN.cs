@@ -5,24 +5,17 @@ namespace GettingStartedLibrary
     public class PrintAllPrimesForN 
     {
         public static string PrintAllPrimesForNSolution(int n)
-        // Prints all the given integer and all primes up to the given positive integer.
         {
             int x = 2;
-            string primes = n + "\n" + 1;
+            string primes = "Prime numbers up to and including " + n + ":\n" + 1;
             if (n < 1)
             {
-                Console.WriteLine("Pleaase enter a positive integer.");
-                return "Please enter a positive integer.";
-            }
-            else if (n == 1)
-            {
-                Console.WriteLine(primes);
-                return primes;
+                Console.WriteLine("You must enter a positive integer to receive a valid return value .");
+                return "Invalid operation due to nonpositive arguement.";
             }
             else
             {
                 while (x <= n)
-                // While loop is infinite for reasons that I don't understand.
                 {
                     bool ContinueForLoop = true;
                     for (int i = 2; i <= x; i++)

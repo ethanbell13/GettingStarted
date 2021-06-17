@@ -2,11 +2,10 @@
 namespace GettingStartedLibrary
 {
     public class HelloWorld
-    // Says "Hello World"
     {
-        public static string HelloWorldSolution()
+        public static void HelloWorldSolution()
         {
-            return "Hello World";
+            Console.WriteLine("Hello World!");
         }
     }
 }

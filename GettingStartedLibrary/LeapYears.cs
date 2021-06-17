@@ -1,50 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
 namespace GettingStartedLibrary
-{
-    //Takes in a year and then prints out the next 20 leap years.
+{ 
     public class Leapyears
     {
-        public static void LeapYearsSolution(int year)
+        public void LeapYearsSolution(int year)
         {
             int iterationYear = year;
             List<int> leapYears = new List<int>();
-            bool condition = true;
-            while(condition == true)
+            if(year <= 0)
             {
-                if((iterationYear % 4) == 0 && ((iterationYear % 100) != 0 || (iterationYear % 400) == 0))
+                Console.WriteLine("Let's keep it to the AD times please(Only positive integers excepted.)");
+            }
+            else
+            {
+                while (true) 
                 {
-                    if(iterationYear != year)
+                    if ((iterationYear % 4) == 0 && ((iterationYear % 100) != 0 || (iterationYear % 400) == 0))
                     {
-                        leapYears.Add(iterationYear);
-                        condition = false;
+                        if (iterationYear != year)
+                        {
+                            leapYears.Add(iterationYear);
+                            break;
+                        }
+                        else
+                        {
+                            break;
+                        }
                     }
                     else
                     {
-                        condition = false;
+                        iterationYear++;
                     }
                 }
-                else
+                while (leapYears.Count != 20)
                 {
-                    iterationYear++;
+                    iterationYear += 4;
+                    if ((iterationYear % 100) != 0 || (iterationYear % 400) == 0)
+                    {
+                        leapYears.Add(iterationYear);
+                    }
+                    else
+                    {
+                        continue;
+                    }
                 }
-            }
-            while(leapYears.Count != 20)
-            {
-                iterationYear += 4;
-                if((iterationYear % 100) != 0 || (iterationYear % 400) == 0)
+                Console.WriteLine("The next 20 leap years are:");
+                foreach (int i in leapYears)
                 {
-                    leapYears.Add(iterationYear);
+                    Console.WriteLine(i);
                 }
-                else
-                {
-                    continue;
-                }
-            }
-            Console.WriteLine("The next 20 leap years are:");
-            foreach (int i in leapYears)
-            {
-                Console.WriteLine(i);
             }
         }
     }

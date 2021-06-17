@@ -1,23 +1,22 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+using System;
+using System.IO;
 namespace GettingStartedLibrary.Tests
 {
     [TestClass]
-    public class SumToNTest
+    public class SumToNTests
     {
         [TestMethod]
-        public void BasicTest()
+        public void PositiveIntTest()
         {
-            int input = 5;
-            int result = SumToN.SumToNSolution(input);
+            int result = SumToN.SumToNSolution(5);
             Assert.AreEqual(15, result);
         }
         [TestMethod]
-        public void NegIntTest()
+        public void NonPositiveIntTest()
         {
-            int input = -1;
-            int result = SumToN.SumToNSolution(input);
-            Assert.AreEqual(1, result);
+            int result = SumToN.SumToNSolution(-5);
+            Assert.AreEqual(-14, result);
         }
     }
 }

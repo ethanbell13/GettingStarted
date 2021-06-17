@@ -1,4 +1,3 @@
-C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\GettingStartedSolution\GettingStartedLibrary\obj\Debug\net5.0\GettingStartedLibrary.csprojAssemblyReference.cache
 C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\GettingStartedSolution\GettingStartedLibrary\obj\Debug\net5.0\GettingStartedLibrary.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\GettingStartedSolution\GettingStartedLibrary\obj\Debug\net5.0\GettingStartedLibrary.AssemblyInfoInputs.cache
 C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\GettingStartedSolution\GettingStartedLibrary\obj\Debug\net5.0\GettingStartedLibrary.AssemblyInfo.cs
@@ -10,3 +9,4 @@ C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\GettingStartedSolution\
 C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\GettingStartedSolution\GettingStartedLibrary\obj\Debug\net5.0\GettingStartedLibrary.dll
 C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\GettingStartedSolution\GettingStartedLibrary\obj\Debug\net5.0\ref\GettingStartedLibrary.dll
 C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\GettingStartedSolution\GettingStartedLibrary\obj\Debug\net5.0\GettingStartedLibrary.pdb
+C:\Users\ethan\Documents\Official Stuff\Coding Portfolio\GettingStartedSolution\GettingStartedLibrary\obj\Debug\net5.0\GettingStartedLibrary.csproj.AssemblyReference.cache
