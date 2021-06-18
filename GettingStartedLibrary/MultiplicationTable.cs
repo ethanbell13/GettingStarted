@@ -8,7 +8,7 @@ namespace GettingStartedLibrary
         private const int Height = 12;
         private const int Width = 12;
 
-        public int[,] MultiplicationTableSolution()
+        public void MultiplicationTableSolution()
         {
             // TODO: Try this approach
             // var matrix = new int[Height + 1, Width + 1];
