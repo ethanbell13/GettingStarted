@@ -20,8 +20,6 @@
 
   <ItemGroup>
     <Folder Include="Advanced" />
-    <Folder Include="Beginner" />
-    <Folder Include="Intermediate" />
   </ItemGroup>
 
 </Project>
