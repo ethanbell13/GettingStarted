@@ -10,12 +10,22 @@ namespace GettingStartedLibrary
         //this pattern. https://www.mathworks.com/matlabcentral/cody/problems/1319-leap-years-on-other-planets
         public static List<int> LeapYearRuleGeneratorSolution(decimal solaryeardurationinfractionaldays)
         {
+            if (solaryeardurationinfractionaldays <= 0)
+            {
+                Console.WriteLine("Parameter must be a positive number.");
+                return new List<int> { 1, 1, 1 };
+            }
             decimal yearlyDifference = solaryeardurationinfractionaldays % 1;
+            if (yearlyDifference == 0)
+            {
+                Console.WriteLine("This planet doesn't need leapyears.");
+                return new List<int> { 0, 0, 0 };
+            }
             var schedule = new List<int>();
             var dividingNumber = 1;
             var leapYear = true;
             decimal fraction;
-            while(Math.Round(yearlyDifference, 4) != 0)
+            while(Math.Round(yearlyDifference, 4) != Math.Round(new decimal(0), 4))
             {
                 int counter = 1;
                 var incrementingDifference = yearlyDifference;

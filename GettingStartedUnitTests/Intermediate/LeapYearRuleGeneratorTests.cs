@@ -8,6 +8,18 @@ namespace GettingStartedUnitTests
     public class LeapYearRuleGeneratorTests
     {
         [TestMethod]
+        public void TakesInNegativeValueReturnsMeaninglessListAndTellsUserToTryAgainWithPositiveValue()
+        {
+            var desiredResult = new List<int> { 1, 1, 1 };
+            CollectionAssert.AreEqual(desiredResult, LeapYearRuleGenerator.LeapYearRuleGeneratorSolution(new decimal(-1)));
+        }
+        [TestMethod]
+        public void TakeInSolarYearThatAllignsPerfectlyWithCalendarDaysTellsUserLeapYearsNotNeededAndReturnsMeaninglessList()
+        {
+            var desiredResult = new List<int> { 0, 0, 0 };
+            CollectionAssert.AreEqual(desiredResult, LeapYearRuleGenerator.LeapYearRuleGeneratorSolution(new decimal(365)));
+        }
+        [TestMethod]
         public void TakesInEarthsSolarYearOutputs4And132And13068()
         {
             var result = new List<int>() { 4, 132, 13068 };

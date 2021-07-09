@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace GettingStartedLibrary
 {
@@ -7,7 +8,8 @@ namespace GettingStartedLibrary
     {
         static void Main(string[] args)
         {
-            foreach(int i in LeapYearRuleGenerator.LeapYearRuleGeneratorSolution(new decimal(14183.7398)))
+            var test = LeapYearRuleGenerator.LeapYearRuleGeneratorSolution(new decimal (365.123456));
+            foreach(int i in test)
             {
                 Console.WriteLine(i);
             }
