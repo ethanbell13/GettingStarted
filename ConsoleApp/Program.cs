@@ -1,18 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using NCalc;
+using System.Diagnostics;
 namespace GettingStartedLibrary
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var test = LeapYearRuleGenerator.LeapYearRuleGeneratorSolution(new decimal (365.123456));
-            foreach(int i in test)
-            {
-                Console.WriteLine(i);
-            }
+            var totalTime = new Stopwatch();
+            totalTime.Start();
+            var x = EquationsThatSumTo100.EquationsThatSumTo100Solution();
+            totalTime.Stop();
+            var time = totalTime.Elapsed;
+            var y = 2;
         }
     }
 }
