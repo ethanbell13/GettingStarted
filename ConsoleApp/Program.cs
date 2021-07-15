@@ -9,12 +9,10 @@ namespace GettingStartedLibrary
     {
         static void Main(string[] args)
         {
-            var totalTime = new Stopwatch();
-            totalTime.Start();
-            var x = EquationsThatSumTo100.EquationsThatSumTo100Solution();
-            totalTime.Stop();
-            var time = totalTime.Elapsed;
-            var y = 2;
+            var test = StringToMorseCode.StringToMorseCodeTranslator("Hello my name is Bob. End of Work", StringToMorseCode.morseCodeDict);
+            Console.WriteLine(test);
         }
     }
 }
+
+//"Hello my name is Bob. End of Work"

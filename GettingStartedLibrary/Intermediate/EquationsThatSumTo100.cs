@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using NCalc;
 using System.Linq;
-using System.Diagnostics;
 
 namespace GettingStartedLibrary
 {
